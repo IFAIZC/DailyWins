@@ -1,0 +1,27 @@
+.label-style {
+  display: block; 
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: white;
+}
+
+.input-style {
+  display: block;
+  width: 100%; 
+  max-width: 300px;
+  padding: 0.5rem; 
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  box-sizing: border-box;
+}
+
+.input-style::placeholder {
+  color: #aaa;
+}
+
+.main-input-container {
+  width: 100%;
+  max-width: 200px;
+}

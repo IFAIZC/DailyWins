@@ -7,12 +7,15 @@ function App() {
 
   return (
     <>
-      <p>DailyWins</p>
-      <Greet name="Irfan"/>
-      <Input title="One Thing I Learned"/>
-      <Input title="One Win"/>
-      <Input title="One Thing To "/>
-      <Button title="Log"/>
+      <p className='dailywins'>DailyWins</p>
+      <Greet name="IRFAN"/>
+
+      <div className='input-container'>
+        <Input title="One Thing I Learned"/>
+        <Input title="One Win"/>
+        <Input title="One Thing To Improve"/>
+        <Button title="Log"/>
+      </div>
     </>
   )
 }
