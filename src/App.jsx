@@ -1,18 +1,18 @@
 import './App.css'
+import Greet from './components/greet/Greet'
+import Input from './components/input/Input'
+import Button from './components/button/Button'
 
 function App() {
 
   return (
     <>
-      <h1>DailyWins</h1>
-      <h4>are you ready to log your wins?</h4>
-      <label htmlFor="">Input1</label>
-      <input type="text"/>
-      <label htmlFor="">Input2</label>
-      <input type="text"/>
-      <label htmlFor="">Input3</label>
-      <input type="text"/>
-      <button>Log</button>
+      <p>DailyWins</p>
+      <Greet name="Irfan"/>
+      <Input title="One Thing I Learned"/>
+      <Input title="One Win"/>
+      <Input title="One Thing To "/>
+      <Button title="Log"/>
     </>
   )
 }
