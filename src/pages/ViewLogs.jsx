@@ -6,6 +6,7 @@ export default function ViewLogs() {
   const [logs, setLogs] = useState([]); // State to store logs
   const [loading, setLoading] = useState(true); // State to show loading status
 
+  // TO STUDY THIS!!!
   // Fetch logs from Supabase when the component mounts
   useEffect(() => {
     async function fetchLogs() {
@@ -33,7 +34,7 @@ export default function ViewLogs() {
   return (
     <div>
       {loading ? (
-        <p>Loading...</p>
+        <p className='no-logs-msg'>Loading...</p>
       ) : logs.length > 0 ? (
         <div className="logs-container">
           {logs.map((log) => (
