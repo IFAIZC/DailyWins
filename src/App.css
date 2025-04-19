@@ -28,9 +28,27 @@ body {
 }
 
 .dailywins {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute; /* Allows precise positioning */
+  left: 50%; /* Move to the horizontal center */
+  transform: translateX(-50%); /* Adjust for centering */
   text-align: center;
   color: white;
 }
+
+.view-logs{
+  position: absolute;
+  color: white;
+  right: 1px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50px;
+}
+
