@@ -5,6 +5,7 @@ import Input from './components/input/Input';
 import Button from './components/button/Button';
 import { Routes, Route, Link } from 'react-router-dom';
 import ViewLogs from './pages/ViewLogs';
+import supabase from './config/supabaseClient'
 
 function App() {
   const [firstQ, setFirstQ] = useState('');
@@ -16,14 +17,38 @@ function App() {
     setViewLog((log) => !log); // Toggle the current state
   }
 
-  function handleLog(e) {
+  // connecting to supabase (to POST)
+  async function handleLog(e) {
     e.preventDefault();
-    console.log('One Thing I Learned:', firstQ);
-    console.log('One Win:', secondQ);
-    console.log('One Thing To Improve:', thirdQ);
-    setFirstQ("");
-    setSecondQ("");
-    setThirdQ("");
+
+    if (!firstQ || !secondQ || !thirdQ) {
+      alert('Please fill out all fields before submitting.');
+      return;
+    }
+
+    const logData = {
+      learned: firstQ,
+      win: secondQ,
+      improve: thirdQ,
+    };
+
+    try {
+      const {data,error} = await supabase
+      .from("daily_logs")
+      .insert([logData]);
+
+      if (error) {
+        console.error('Error inserting data:', error.message);
+      } else {
+        console.log('Data inserted successfully:', data);
+        setFirstQ('')
+        setSecondQ('')
+        setThirdQ('')
+        alert('You have successfully log your wins!');
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
   };
 
   return (
@@ -61,7 +86,7 @@ function App() {
             </form>
           </>
         } />
-        <Route path="/ViewLogs" element={<ViewLogs />} />
+        <Route path="/ViewLogs" element={<ViewLogs/>} />
       </Routes>
     </>
   );
