@@ -86,7 +86,7 @@ function App() {
             </form>
           </>
         } />
-        <Route path="/ViewLogs" element={<ViewLogs/>} />
+        <Route path="/ViewLogs" element={<ViewLogs/>}/>
       </Routes>
     </>
   );
