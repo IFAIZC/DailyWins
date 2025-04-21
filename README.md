@@ -1,12 +1,17 @@
-# React + Vite
+<img width="1396" alt="DailyWins-Post" src="https://github.com/user-attachments/assets/5c2bd61a-040e-4f29-90c1-49eb0dcc1f51" />🏆 DailyWins
+A simple app to track your daily wins — because progress, no matter how small, matters.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1396" alt="DailyWins-Post" src="https://github.com/user-attachments/assets/21ff0df4-ae6b-4e49-9564-fe9ac0801e26" />
 
-Currently, two official plugins are available:
+🚀 Features
+✅ Log daily accomplishments
+✅ Simple and clean UI
+✅ View logs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📦 Tech Stack
+Frontend: ReactJS 
+Backend: Supabase (Auth + Database)
+Hosting: Netlify
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+💡 Inspiration
+This app was inspired by the idea that tracking small wins builds motivation and momentum.
