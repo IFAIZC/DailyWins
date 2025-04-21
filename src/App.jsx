@@ -5,6 +5,7 @@ import Input from './components/input/Input';
 import Button from './components/button/Button';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import ViewLogs from './pages/ViewLogs';
+import Login from './pages/Login';
 import supabase from './config/supabaseClient';
 
 function App() {
@@ -79,7 +80,7 @@ function App() {
           path="/"
           element={
             <>
-              <Greet name="IRFAN" />
+              <Greet />
               <form onSubmit={handleLog}>
                 <div className="input-container">
                   <Input
@@ -104,6 +105,7 @@ function App() {
           }
         />
         <Route path="/ViewLogs" element={<ViewLogs />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </>
   );

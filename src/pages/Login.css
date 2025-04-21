@@ -1,0 +1,31 @@
+.login-container {
+  display: flex;
+  color: white;
+  justify-content: center;
+  flex-direction: row; /* Ensures children are aligned in a row */
+  align-items: center;
+  gap: 20px; /* Adds spacing between children */
+  margin: 20%;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+  gap: 10px; /* Add spacing between form elements */
+}
+
+form input,
+form button {
+  padding: 5px;
+  font-size: 16px;
+}
+
+form button {
+  margin-top: 25px;
+}
+
+form label {
+  display: flex;
+  justify-content: flex-start;
+}
+
